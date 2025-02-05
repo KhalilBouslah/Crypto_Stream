@@ -14,7 +14,7 @@ Processing: Apache Spark
 
 Storage: PostgreSQL
 
-Visualization: Plotly
+Visualization: Matplotlib
 
 Orchestration: Apache Airflow
 
@@ -22,7 +22,7 @@ Programming Language: Python
 
 # 🏗️ Architecture
 
-Data Ingestion: Fetches Bitcoin price data (1-minute intervals) from Yahoo Finance API.
+Data Ingestion: Fetches Bitcoin price data (30 seconds intervals) from Yahoo Finance API.
 
 Streaming: Kafka acts as the message broker, streaming data to Spark in real-time.
 
@@ -30,7 +30,7 @@ Processing: Spark cleans and transforms the data.
 
 Storage: Processed data is stored in a PostgreSQL database.
 
-Visualization: Plotly generates interactive visualizations for price trends.
+Visualization: Matplotlib generates interactive visualizations for price trends.
 
 Orchestration: Airflow manages and schedules the entire pipeline.
 
@@ -42,7 +42,7 @@ Scalable data streaming with Kafka and Spark
 
 Structured data storage using PostgreSQL
 
-Dynamic and interactive visualizations with Plotly
+Dynamic and interactive visualizations with Matplotlib
 
 Automated workflows using Apache Airflow
 
