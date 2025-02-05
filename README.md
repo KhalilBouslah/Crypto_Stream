@@ -1,6 +1,10 @@
 # Crypto_Stream
 CryptoStream is a real-time data engineering pipeline that ingests Bitcoin price data from the Yahoo Finance API using Kafka, processes it with Apache Spark, stores it in a PostgreSQL database, and visualizes the data using Matplotlib. This project showcases end-to-end data pipeline orchestration with Apache Airflow.
-⚙️ Tech Stack
+
+# Architecture Diagram
+![Crypto_stream pipeline](https://github.com/KhalilBouslah/Crypto_Stream/blob/main/Screenshots/CryptoStream%20architecure.png)
+
+# ⚙️ Tech Stack
 
 Data Ingestion: Yahoo Finance API (yfinance library)
 
@@ -16,7 +20,7 @@ Orchestration: Apache Airflow
 
 Programming Language: Python
 
-🏗️ Architecture
+# 🏗️ Architecture
 
 Data Ingestion: Fetches Bitcoin price data (1-minute intervals) from Yahoo Finance API.
 
@@ -46,7 +50,9 @@ Automated workflows using Apache Airflow
 
 1️⃣ Prerequisites
 
-Python 3.x
+Python 3.12
+
+Docker & Docker Compose (for easier setup)
 
 PostgreSQL
 
@@ -56,5 +62,5 @@ Apache Spark
 
 Apache Airflow
 
-Docker & Docker Compose (optional for easier setup)
+
 
