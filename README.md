@@ -63,4 +63,55 @@ Apache Spark
 Apache Airflow
 
 
+Project Setup
+1. Initial Setup
 
+    Create a new project folder and navigate to it:
+
+       mkdir stream_project && cd stream_project
+
+Create and activate a Python virtual environment:
+
+    python -m venv myenv
+    source myenv/bin/activate
+
+2. Start Docker Containers
+
+    Use the docker-compose.yml file to pull and run necessary containers:
+
+       sudo docker-compose up -d
+
+Running the Pipeline
+1. Producer Script
+
+Run the script to fetch weather data and send it to Kafka:
+
+    python Get_api.py
+
+# Create Database: 
+     sudo docker exec -it PostgresCont bash 
+     psql -h localhost -U postgres  
+     CREATE DATABASE crypto;
+     |c crypto;
+
+# Create table:
+     python create_table.py
+     
+2. Install Required Spark Packages
+
+Download necessary jar files for  Kafka and Postgres to connect with Spark (You will find necessary jar names in spark_stream.py):
+
+# Run spark_stream.py:
+     spark-submit --packages org.postgresql:postgresql:42.5.4,org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.4,org.apache.spark:spark-streaming-kafka-0-10_2.12:3.5.4 spark_stream.py
+# Dockerize spark_stream.py to execute it with airflow:
+     docker build -f Docker -t stream_project --build-arg POSTGRES_PASSWORD=$POSTGRES_PASSWORD  .
+
+# Run job from airflow:
+
+![Crypto_stream pipeline](https://github.com/KhalilBouslah/Crypto_Stream/blob/main/Screenshots/airflow_crypto.png)
+
+# See insights from data !
+
+![Crypto_stream pipeline](https://github.com/KhalilBouslah/Crypto_Stream/blob/main/Screenshots/vis_crypto.png)
+
+You are encouraged to enhance the visualizations and improve both the quantity and quality of the data.
