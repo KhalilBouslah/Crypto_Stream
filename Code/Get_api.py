@@ -4,8 +4,6 @@ import yfinance as yf
 import time
 from kafka import KafkaProducer
 import json
-import uuid
-import random
 
 id_counter = 1
 def get_crypto_data(crypto_symbol):
