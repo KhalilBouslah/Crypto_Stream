@@ -108,10 +108,11 @@ Download necessary jar files for  Kafka and Postgres to connect with Spark (You 
 
 # Run job from airflow:
 
-![Crypto_stream pipeline](https://github.com/KhalilBouslah/Crypto_Stream/blob/main/Screenshots/airflow_crypto.png)
+![airflow_dags](https://github.com/KhalilBouslah/Crypto_Stream/blob/main/Screenshots/airflow_crypto.png)
+![logs](https://github.com/KhalilBouslah/Crypto_Stream/blob/main/Screenshots/logs.png)
 
 # See insights from data !
-
+![Table](https://github.com/KhalilBouslah/Crypto_Stream/blob/main/Screenshots/Table.png)
 ![Crypto_stream pipeline](https://github.com/KhalilBouslah/Crypto_Stream/blob/main/Screenshots/vis_crypto.png)
 
 You are encouraged to enhance the visualizations and improve both the quantity and quality of the data.
